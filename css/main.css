@@ -47,11 +47,46 @@ html, body {
 }
 
 main {
-    flex: 1;   /* Empuja el footer hacia abajo */
+    flex: 1;
 }
 
 footer {
     background-color: #87d36f;
     text-align: center;
-    padding: 10px;
+    padding: 8px;
+}
+
+.espacio {
+    margin-bottom: 20px;
+}
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+section > h2 { flex-basis: 100%; }
+
+/* Cada proyecto ocupa el ancho de su contenido (la imagen) */
+.proyecto {
+    flex: 0 0 auto; /* no crece, no se encoge; ancho basado en contenido */
+    box-sizing: border-box;
+}
+
+.proyecto img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    border : 3px solid #000000;
+}
+
+
+@media (max-width: 600px) {
+    .proyecto { width: 100%; }
+    .proyecto img { width: 100%; }
 }
