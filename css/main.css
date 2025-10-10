@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 * {
     margin: 0;
@@ -6,87 +6,199 @@
     box-sizing: border-box;
 }
 
-header {
-    background-color: #87d36f;
-    text-align: center;
-    margin: 20px;
+body {
+    background-color: #cce0ff;
+    margin-bottom: 60px;
 }
 
-#perfil-con-redes {
+header {
+    background-color: #4a8bdc;
+    text-align: center;
+    padding: 8px;
+    border: 2px solid #000000;
+    align-items: center;
+    justify-content: center;
+    font-family: "Nunito Sans", sans-serif;
+
+}
+
+footer {
+    background-color: #4a8bdc;
+    text-align: center;
+    padding: 8px;
+    border: 2px solid #000000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    background-color: #7cb1f3;
+    text-align: center;
+    padding: 8px;
+    border-radius: 50px;
+    margin: 5px;
+    border: 2px solid #000000;
+}
+
+nav a {
+    margin: 0 50px;
+    color: black;
+    text-decoration: none;
+}
+
+#texto-bienvenida {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+#texto-bienvenida p {
+    font-size: 15px;
+    margin-right: 210px;
+}
+
+#contenedor-perfil {
     float: right;
     text-align: center;
     width: 200px;
+    margin-right: 10px;
+    margin-top: -180px;
+    border: 2px solid #000000;
+    border-radius: 30px;
+    background-color: #7cb1f3;
 }
 
 #foto-perfil {
     width: 100%;
-    border-radius: 20px;
-    display: block;
-    margin-bottom: 10px;
+    border-radius: 30px;
+    margin-bottom: 5px;
 }
 
 #frase {
     font-size: 14px;
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
 }
 
-#instagram-link {
-    display: inline-block;
+#imagenes-redes-sociales img {
+    width: 27px;
 }
 
-#instagram-logo {
-    width: 25px;
-    height: auto;
+#imagenes-redes-sociales a {
+    text-decoration: none;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
-
-footer {
-    background-color: #87d36f;
+#proyectos-personales {
+    margin-left: 10px;
+    font-size: 20px;
+    background-color: #4a8bdc;
+    border-radius: 5px;
+    margin-right: 215px;
     text-align: center;
-    padding: 8px;
+    padding: 5px;
+    border: 2px solid #000000;
 }
 
-.espacio {
-    margin-bottom: 20px;
-}
-
-
-section {
+#proyectos-ordenados {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 80px;
+    margin: 10px 0 0 30px;
+    text-align: center;
+    font-family: "Nunito Sans", sans-serif;
 }
 
-
-section > h2 { flex-basis: 100%; }
-
-/* Cada proyecto ocupa el ancho de su contenido (la imagen) */
-.proyecto {
-    flex: 0 0 auto; /* no crece, no se encoge; ancho basado en contenido */
-    box-sizing: border-box;
+#proyectos-ordenados img {
+    width: 200px;
+    aspect-ratio: 1/1;
 }
 
-.proyecto img {
-    width: 250px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    border : 3px solid #000000;
+.nombre-proyecto {
+    font-size: 20px;
 }
 
+.linea-separacaion {
+    margin: 20px 0;
+    border-radius: 100px;
+    padding: 10px;
+    background-color: #4a8bdc;
+    border: 2px solid #000000;
+    margin: 0 10px 0 10px;
+}
 
-@media (max-width: 600px) {
-    .proyecto { width: 100%; }
-    .proyecto img { width: 100%; }
+#habilidades-y-dominio {
+    font-family: "Nunito Sans", sans-serif;
+    margin: 0 10px 0 10px;
+    padding: 5px;
+    border-radius: 100px;
+}
+
+#contenedor-barras-info {
+    margin: 0 10px 0px 10px;
+}
+
+#contenedor-barras-info p {
+    font-size: 18px;
+    margin-left: 25px;
+}
+
+.progreso {
+    margin: 5px 25px 15px 25px;
+    padding: 6px;
+    border-radius: 6px;
+
+}
+
+.barra {
+    height: 10px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right,
+            #4cd964, #5ac8fa, #007aff,
+            #7DC8E8, #5856d6, #ff2d55);
+    transition: 0.1s linear;
+}
+
+.progreso-infinito .barra {
+    background-image: linear-gradient(to right,
+            #4cd964, #5ac8fa, #007aff,
+            #7DC8E8, #5856d6, #ff2d55);
+    animation: colorAnimation 4s infinite;
+}
+
+@keyframes colorAnimation {
+    0% {
+        background-image: linear-gradient(to right,
+                #4cd964, #5ac8fa, #007aff,
+                #7DC8E8, #5856d6, #ff2d55);
+    }
+
+    20% {
+        background-image: linear-gradient(to right,
+                #5ac8fa, #007aff, #7DC8E8,
+                #5856d6, #ff2d55, #4cd964);
+    }
+
+    40% {
+        background-image: linear-gradient(to right,
+                #007aff, #7DC8E8, #5856d6,
+                #ff2d55, #4cd964, #5ac8fa);
+    }
+
+    60% {
+        background-image: linear-gradient(to right,
+                #7DC8E8, #5856d6, #ff2d55,
+                #4cd964, #5ac8fa, #007aff);
+    }
+
+    100% {
+        background-image: linear-gradient(to right,
+                #5856d6, #ff2d55, #4cd964,
+                #5ac8fa, #007aff, #7DC8E8);
+    }
 }
