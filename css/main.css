@@ -6,63 +6,73 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #cce0ff;
-    margin-bottom: 60px;
-}
-
 header {
-    background-color: #4a8bdc;
+    background-color: #5D1A8B;
     text-align: center;
     padding: 8px;
     border: 2px solid #000000;
-    align-items: center;
-    justify-content: center;
+    color: #DCC6E0;
+    font-size: 25px;
     font-family: "Nunito Sans", sans-serif;
-
 }
+
+body {
+    background-color: #DCC6E0;
+    font-family: "Nunito Sans", sans-serif;
+}
+
 
 footer {
-    background-color: #4a8bdc;
+    background-color: #5D1A8B;
     text-align: center;
     padding: 8px;
     border: 2px solid #000000;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    color: rgb(0, 0, 0);
+    color: #DCC6E0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+
 nav {
-    background-color: #7cb1f3;
+    background-color: #8E44AD;
     text-align: center;
     padding: 8px;
     border-radius: 50px;
     margin: 5px;
     border: 2px solid #000000;
+    overflow: hidden
 }
+
 
 nav a {
     margin: 0 50px;
-    color: black;
+    color: #DCC6E0;
     text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #b668d8;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
 #texto-bienvenida {
     margin-left: 10px;
     margin-bottom: 10px;
     font-size: 20px;
-    font-family: "Nunito Sans", sans-serif;
+    margin-right: 210px;
 }
 
 #texto-bienvenida p {
     font-size: 15px;
-    margin-right: 210px;
 }
 
 #contenedor-perfil {
@@ -73,7 +83,7 @@ nav a {
     margin-top: -180px;
     border: 2px solid #000000;
     border-radius: 30px;
-    background-color: #7cb1f3;
+    background-color: #8E44AD;
 }
 
 #foto-perfil {
@@ -87,56 +97,70 @@ nav a {
     margin: 0 0 5px 0;
 }
 
-#imagenes-redes-sociales img {
-    width: 27px;
-}
-
-#imagenes-redes-sociales a {
-    text-decoration: none;
-}
-
 #proyectos-personales {
     margin-left: 10px;
     font-size: 20px;
-    background-color: #4a8bdc;
+    background-color: #8E44AD;
     border-radius: 5px;
     margin-right: 215px;
     text-align: center;
     padding: 5px;
     border: 2px solid #000000;
+    overflow: hidden;
 }
+
+
+
 
 #proyectos-ordenados {
     display: flex;
-    gap: 80px;
-    margin: 10px 0 0 30px;
-    text-align: center;
-    font-family: "Nunito Sans", sans-serif;
+    gap: 20px;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
-#proyectos-ordenados img {
-    width: 200px;
-    aspect-ratio: 1/1;
+#proyectos-ordenados>article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#proyectos-ordenados>article>img {
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
 }
 
 .nombre-proyecto {
     font-size: 20px;
+    text-align: center;
+    margin-bottom: 5px;
 }
+
+#proyectos-ordenados>article p:last-of-type {
+    text-align: center;
+    margin-top: 5px;
+}
+
+
 
 .linea-separacaion {
     margin: 20px 0;
     border-radius: 100px;
     padding: 10px;
-    background-color: #4a8bdc;
+    background-color: #8E44AD;
     border: 2px solid #000000;
     margin: 0 10px 0 10px;
 }
 
 #habilidades-y-dominio {
-    font-family: "Nunito Sans", sans-serif;
     margin: 0 10px 0 10px;
     padding: 5px;
     border-radius: 100px;
+    font-family: "Nunito Sans", sans-serif;
 }
 
 #contenedor-barras-info {
@@ -148,57 +172,165 @@ nav a {
     margin-left: 25px;
 }
 
-.progreso {
-    margin: 5px 25px 15px 25px;
-    padding: 6px;
-    border-radius: 6px;
-
+.progress__bar {
+    position: relative;
+    height: 7px;
+    width: 0;
+    border-radius: 10px;
+    background: linear-gradient(270deg,
+            #2C003E, #5D1A8B, #8E44AD, #B78FC3,
+            #2C003E, #5D1A8B, #8E44AD, #B78FC3);
+    background-size: 400% 100%;
+    animation:
+        widthAnim 2s forwards,
+        moverGradiente 4s linear infinite;
+    margin-bottom: 10px;
 }
 
-.barra {
-    height: 10px;
-    border-radius: 50px;
-    background-image: linear-gradient(to right,
-            #4cd964, #5ac8fa, #007aff,
-            #7DC8E8, #5856d6, #ff2d55);
-    transition: 0.1s linear;
+@keyframes widthAnim {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--width);
+    }
 }
 
-.progreso-infinito .barra {
-    background-image: linear-gradient(to right,
-            #4cd964, #5ac8fa, #007aff,
-            #7DC8E8, #5856d6, #ff2d55);
-    animation: colorAnimation 4s infinite;
-}
-
-@keyframes colorAnimation {
+@keyframes moverGradiente {
     0% {
-        background-image: linear-gradient(to right,
-                #4cd964, #5ac8fa, #007aff,
-                #7DC8E8, #5856d6, #ff2d55);
+        background-position: 0% 0%;
+    }
+
+    5% {
+        background-position: 5% 0%;
+    }
+
+    10% {
+        background-position: 10% 0%;
+    }
+
+    15% {
+        background-position: 15% 0%;
     }
 
     20% {
-        background-image: linear-gradient(to right,
-                #5ac8fa, #007aff, #7DC8E8,
-                #5856d6, #ff2d55, #4cd964);
+        background-position: 20% 0%;
+    }
+
+    25% {
+        background-position: 25% 0%;
+    }
+
+    30% {
+        background-position: 30% 0%;
+    }
+
+    35% {
+        background-position: 35% 0%;
     }
 
     40% {
-        background-image: linear-gradient(to right,
-                #007aff, #7DC8E8, #5856d6,
-                #ff2d55, #4cd964, #5ac8fa);
+        background-position: 40% 0%;
+    }
+
+    45% {
+        background-position: 45% 0%;
+    }
+
+    50% {
+        background-position: 50% 0%;
+    }
+
+    55% {
+        background-position: 55% 0%;
     }
 
     60% {
-        background-image: linear-gradient(to right,
-                #7DC8E8, #5856d6, #ff2d55,
-                #4cd964, #5ac8fa, #007aff);
+        background-position: 60% 0%;
+    }
+
+    65% {
+        background-position: 65% 0%;
+    }
+
+    70% {
+        background-position: 70% 0%;
+    }
+
+    75% {
+        background-position: 75% 0%;
+    }
+
+    80% {
+        background-position: 80% 0%;
+    }
+
+    85% {
+        background-position: 85% 0%;
+    }
+
+    90% {
+        background-position: 90% 0%;
+    }
+
+    95% {
+        background-position: 95% 0%;
     }
 
     100% {
-        background-image: linear-gradient(to right,
-                #5856d6, #ff2d55, #4cd964,
-                #5ac8fa, #007aff, #7DC8E8);
+        background-position: 100% 0%;
     }
+}
+
+
+
+
+
+#cubo {
+    width: 800px;
+    height: 600px;
+    background: #B78FC3;
+    border-radius: 20px;
+    position: fixed;
+    top: 120px;
+    left: 24%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#cubo input,
+textarea {
+    padding: 15px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 15px;
+    width: 500px;
+}
+
+#cubo textarea {
+    height: 200px;
+    resize: none
+}
+
+button {
+    background-color: #5D1A8B;
+    color: #DCC6E0;
+    border: none;
+    padding: 10px 215px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #8E44AD;
+    transition: 0.3s;
+    padding: 15px 220px;
 }
