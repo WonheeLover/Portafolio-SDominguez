@@ -4,21 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Portafolio profecional | Said Dominguez</title>
+    <title>Contáctame | Said Domínguez</title>
     <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <header>
-        <h1>Contactame</h1>
+        <h1>Contáctame</h1>
     </header>
 
     <div id="cubo">
-        <input type="text" placeholder="Nombre">
-        <input type="text" placeholder="Correo">
-        <textarea placeholder="Mensaje"></textarea>
-        <button>
+        <div class="campo">
+            <p>Nombre</p>
+            <input type="text" placeholder="Ejemplo: Said Domínguez">
+        </div>
+
+        <div class="campo">
+            <p>Correo electrónico</p>
+            <input type="email" placeholder="Ejemplo: ejemplo@utcancun.edu.mx">
+        </div>
+
+        <div class="campo">
+            <p>Teléfono</p>
+            <input type="tel" placeholder="Ejemplo: +52 9981234567">
+        </div>
+
+        <div class="campo">
+            <p>Fecha del evento</p>
+            <input type="date">
+        </div>
+
+        <div class="campo">
+            <p>Modo de contacto preferido</p>
+            <div class="opciones">
+                <label class="radio-opcion">
+                    <input type="radio" name="contacto" value="whatsapp">
+                    <span>WhatsApp</span>
+                </label>
+                <label class="radio-opcion">
+                    <input type="radio" name="contacto" value="correo">
+                    <span>Correo</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="campo">
+            <p>¿Eres cliente?</p>
+            <div class="opciones">
+                <label class="radio-opcion">
+                    <input type="radio" name="cliente" value="si">
+                    <span>Sí</span>
+                </label>
+                <label class="radio-opcion">
+                    <input type="radio" name="cliente" value="no">
+                    <span>No</span>
+                </label>
+            </div>
+        </div>
+
+
+
+        <div class="campo">
+            <p>Mensaje</p>
+            <textarea placeholder="Ejemplo: Me gustaría saber más sobre tus servicios."></textarea>
+        </div>
+
+        <button id="btn-enviar">
             Enviar
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send"
                 viewBox="0 0 16 16">
@@ -26,9 +78,12 @@
                     d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
             </svg>
         </button>
-
     </div>
 
+    <footer>
+        <p>© 2025 Said Domínguez | Portafolio Profesional</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
