@@ -292,7 +292,6 @@ body {
     font-family: "Nunito Sans", sans-serif;
     margin: 0;
     padding: 0;
-    width: 100%;
 }
 
 header {
@@ -300,12 +299,12 @@ header {
     color: #DCC6E0;
     text-align: center;
     padding: 10px;
-    border: 2px solid #000;
+    border: 2px solid #000000;
     font-size: 25px;
 }
 
 #cubo {
-    width: 800px;
+    width: 50%;
     background-color: #B78FC3;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
@@ -313,8 +312,8 @@ header {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 20px;
+
 }
 
 .campo {
@@ -322,16 +321,13 @@ header {
 }
 
 .campo p {
-    display: block;
     font-size: 16px;
     margin-bottom: 5px;
-    margin-left: 5px;
     color: #2C003E;
     font-weight: bold;
 }
 
 #cubo input,
-#cubo select,
 #cubo textarea {
     width: 100%;
     padding: 10px;
@@ -343,22 +339,21 @@ header {
 
 #cubo textarea {
     height: 100px;
+    resize: none;
 
 }
 
 .opciones {
     display: flex;
     gap: 20px;
-    margin-top: 5px;
 }
 
 .radio-opcion {
-    display: flex;
+
     align-items: center;
-    gap: 5px;
     background-color: #8E44AD;
     color: #DCC6E0;
-    padding: 8px 25px;
+    padding: 8px 30px;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
@@ -372,12 +367,23 @@ header {
     display: none;
 }
 
-.radio-opcion input:checked+span {
-    font-weight: bold;
-    text-decoration: underline;
+.radio-opcion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8E44AD;
+    color: #DCC6E0;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: normal;
+}
+
+.radio-opcion:has(input:checked) {
     background-color: #5D1A8B;
-    padding: 5px 15px;
-    border-radius: 5px;
+    color: #fff;
+    text-decoration: underline;
 }
 
 button {
